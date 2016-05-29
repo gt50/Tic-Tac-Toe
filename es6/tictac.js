@@ -1,187 +1,153 @@
 function main() {
 
 const tiles = [$("#1"), $("#2"), $("#3"), $("#4"), $("#5"), $("#6"), $("#7"), $("#8"), $("#9")];
+const letters = [$("#p1"), $("#p2"), $("#p3"), $("#p4"), $("#p5"), $("#p6"), $("#p7"), $("#p8"), $("#p9")];
+
+$("p").text("");
 
 
 for (let i = 0; i < tiles.length; i++) {
 
+
 $(tiles[i]).on("click", function() {
 
-  const redWin = () => {
- if ($(tiles[0]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[1]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[2]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[3]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[4]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[5]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
+const xWin = () => {
+  if ($(letters[0]).text() === "X" && $(letters[1]).text() === "X" && $(letters[2]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
   counter = 0;
-
-}
-
- if ($(tiles[6]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[7]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[8]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[0]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[3]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[6]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-  counter = 0;
-
-}
-
- if ($(tiles[1]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[4]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[7]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
- 
-}
-
- if ($(tiles[2]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[5]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[8]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[0]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[4]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[8]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-    counter = 0;
-
-}
-
- if ($(tiles[2]).css("background-color") === "rgb(255, 0, 0)" && ($(tiles[4]).css("background-color")) === "rgb(255, 0, 0)" && ($(tiles[6]).css("background-color") === "rgb(255, 0, 0)")) {
-   alert("red wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-    counter = 0;
-
-}
-
-
-};
-
-const blueWin = () => {
- if ($(tiles[0]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[1]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[2]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[3]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[4]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[5]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-    counter = 0;
-
-}
-
- if ($(tiles[6]).css("background-color") === "rgb(, 0, 255)" && ($(tiles[7]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[8]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-    counter = 0;
-
-}
-
- if ($(tiles[0]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[3]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[6]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-    counter = 0;
-
-}
-
- if ($(tiles[1]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[4]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[7]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[2]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[5]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[8]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[0]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[4]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[8]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-   counter = 0;
-
-}
-
- if ($(tiles[2]).css("background-color") === "rgb(0, 0, 255)" && ($(tiles[4]).css("background-color")) === "rgb(0, 0, 255)" && ($(tiles[6]).css("background-color") === "rgb(0, 0, 255)")) {
-   alert("blue wins!");
-   $("div").css("background-color", "white");
-   $(tiles[i]).css("background-color", "rgb(255, 255, 255)");
-    counter = 0;
-}
-
-};
-
-	if ($(tiles[i]).css("background-color") === "rgb(255, 255, 255)") {
-
-if (getPlayer() % 2 === 0) {
+  }
   
- $(tiles[i]).css("background-color", "red");
- redWin();
- 
- }
- 
-  else {
-   $(tiles[i]).css("background-color", "blue");
-   blueWin();
-   
-   }
-}
-});
+    if ($(letters[3]).text() === "X" && $(letters[4]).text() === "X" && $(letters[5]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[6]).text() === "X" && $(letters[7]).text() === "X" && $(letters[8]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[0]).text() === "X" && $(letters[3]).text() === "X" && $(letters[6]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[1]).text() === "X" && $(letters[4]).text() === "X" && $(letters[7]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[2]).text() === "X" && $(letters[5]).text() === "X" && $(letters[8]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[0]).text() === "X" && $(letters[4]).text() === "X" && $(letters[8]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[2]).text() === "X" && $(letters[4]).text() === "X" && $(letters[6]).text() === "X") {
+  alert("X Wins!");
+  $("p").text("");
+  counter = 0;
+  }
 
+}
+
+const oWin = () => {
+  if ($(letters[0]).text() === "O" && $(letters[1]).text() === "O" && $(letters[2]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[3]).text() === "O" && $(letters[4]).text() === "O" && $(letters[5]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[6]).text() === "O" && $(letters[7]).text() === "O" && $(letters[8]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[0]).text() === "O" && $(letters[3]).text() === "O" && $(letters[6]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[1]).text() === "O" && $(letters[4]).text() === "O" && $(letters[7]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[2]).text() === "O" && $(letters[5]).text() === "O" && $(letters[8]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[0]).text() === "O" && $(letters[4]).text() === "O" && $(letters[8]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+  
+    if ($(letters[2]).text() === "O" && $(letters[4]).text() === "O" && $(letters[6]).text() === "O") {
+  alert("O Wins!");
+  $("p").text("");
+  counter = 0;
+  }
+
+}
+
+if ($(letters[i]).text() === "") {
+
+  
+  if (getPlayer() % 2 === 0) {
+    $(letters[i]).css("color", "red");
+    $(letters[i]).text("X");
+     xWin();
+  }
+
+else {
+$(letters[i]).css("color", "blue");
+$(letters[i]).text("O");
+  oWin();
+}
+
+}
+
+});
 }
 
 let counter = -1;
-
 $("div").on("click", getPlayer());
 
-
 function getPlayer() {
-
-  // error somewhere in here, can tell due to player 1 showing up 1st 2 turns 2nd round
-
-
 const nums = [1, 2, 1, 2, 1, 2, 1, 2, 1];
-
-  $("p").text("Player " + nums[counter]);
-  counter++;
-  if (counter === nums.length) {
-  counter = 0;
-   alert("draw!");
-  $("div").css("background-color", "white");
-  $(tiles[i]).css("background-color", "white");
-  return counter;
-  }
-return counter; 
+$("#pp").text("Player " + nums[counter]);
+ counter++;
+ if (counter === nums.length) {
+ alert("draw");
+ counter = 0;
+ $("p").text("");
+ $(letters[i]).text("");
+ return counter;
+ }
+ return counter;
 }
 
 }
