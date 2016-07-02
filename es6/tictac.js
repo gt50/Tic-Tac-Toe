@@ -1,6 +1,6 @@
 function main() {
 
-const tiles = [$("#1"), $("#2"), $("#3"), $("#4"), $("#5"), $("#6"), $("#7"), $("#8"), $("#9")];
+const tiles = [$("#one1"), $("#one2"), $("#one3"), $("#two1"), $("#two2"), $("#two3"), $("#three1"), $("#three2"), $("#three3")];
 const letters = [$("#p1"), $("#p2"), $("#p3"), $("#p4"), $("#p5"), $("#p6"), $("#p7"), $("#p8"), $("#p9")];
 
 $("p").text("");
@@ -134,11 +134,20 @@ $(letters[i]).text("O");
 }
 
 let counter = -1;
-$("div").on("click", getPlayer());
+$("table").on("click", getPlayer());
 
 function getPlayer() {
 const nums = [1, 2, 1, 2, 1, 2, 1, 2, 1];
-$("#pp").text("Player " + nums[counter]);
+
+ // fixes issue for player number at start of game
+ 
+  if (counter === -1) {
+  $("#pp").text("");
+}
+
+else {
+    $("#pp").text("Player " + nums[counter]);
+}
  counter++;
  if (counter === nums.length) {
  alert("draw");

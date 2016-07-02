@@ -3,125 +3,74 @@ body {
 }
 
 h1 {
-  text-align: center;
-  font-size: 2.4em;
   font-family: 'Alfa Slab One', cursive;
-  color:  #b22222;
-}
-
-.first {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-left: 0;
-  border-top: 0;
- float: left;
- position: relative;
- margin-left: 100px;
-}
-
-.second {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-top: 0;
-float: left;
-position: relative;
-}
-
-.third {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-top: 0;
-  border-right: 0;
-  float: left;
-  position: relative;
-}
-
-.twoOne {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-left: 0;
-  position: relative; top: 100px;
-  margin-left: 100px;
-}
-
-.twoTwo {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  float: left;
-  position: relative; top: -2px; left: 101px;
-  margin-left: 100px;
-}
-
-.twoThree {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-right: 0;
-  float: left;
-  position: relative; top: -2px; left: 101px;
-}
-
-.threeOne {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-left: 0;
-  border-bottom: 0;
-  float: left;
-  position: relative; top: 100px; left: -203px;
-}
-
-.threeTwo {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-bottom: 0;
-  float: left;
-  position: relative; top: 100px; left: -203px;
-}
-
-.threeThree {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-right: 0;
-  border-bottom: 0;
-  float: left;
-  position: relative; top: 100px; left: -203px;
-}
-
-p { 
   text-align: center;
-  position: relative;
-  margin-left: 30%;
-  margin-right: 30%;
-  font-size: 2em;
-  font-family: 'Alfa Slab One', cursive;;
-  
-  }
-  
-  .gone {
-  position: relative; top: -60px;
+  color:  #b22222;
+  font-size: 2.4em;
+}
 
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+ tr, td {
+  border: 1px solid black;
+}
+
+td {
+ width: 100px;
+ height: 100px;
+}
+
+#one1 {
+  border-top: 0;
+  border-left: 0;
+}
+
+#one2 {
+  border-top: 0;
+}
+
+#one3 {
+  border-top: 0;
+  border-right: 0;
+}
+
+#two1 {
+  border-left: 0;
+}
+
+#two3 {
+  border-right: 0;
+}
+
+#three1 {
+  border-left: 0;
+  border-bottom: 0;
+}
+
+#three2 {
+  border-bottom: 0;
+}
+
+#three3 {
+  border-bottom: 0;
+  border-right: 0;
 }
 
 .player {
   text-align: right;
   position: relative;
   margin-left: 30%;
-  margin-right: 30%;
+  margin-right: 10%;
   font-size: 1.4em;
 }
 
-#mother {
-  width: 960px;
-  margin: 0 auto;
-  margin-left: 30%;
+p { 
+  text-align: center;
+  position: relative;
   margin-right: 30%;
-  padding-top: 20px;
-}
+  font-size: 2em;
+  font-family: 'Alfa Slab One', cursive;
+  }
