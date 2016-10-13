@@ -122,6 +122,12 @@ function main() {
           $(letters[_i]).text("O");
           oWin();
         }
+        if (counter === letters.length) {
+          alert("draw");
+          counter = 0;
+          $("p").text("");
+          $(letters[i]).text("");
+        }
       }
     });
   };
@@ -144,13 +150,6 @@ function main() {
       $("#pp").text("Player " + nums[counter]);
     }
     counter++;
-    if (counter === nums.length) {
-      alert("draw");
-      counter = 0;
-      $("p").text("");
-      $(letters[i]).text("");
-      return counter;
-    }
     return counter;
   }
 }
